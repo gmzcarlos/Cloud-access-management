@@ -1,7 +1,7 @@
 {
     "name": "SRE_Team",
     "description": "SRE team access",
-    "account_id": "<account id>",
+    "account_id": "<enterprise account id>",
     "profile": {
         "name": "Enterprise SRE Team",
         "rules": [
