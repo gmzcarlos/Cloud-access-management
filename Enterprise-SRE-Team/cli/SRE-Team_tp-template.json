@@ -6,7 +6,7 @@
         "name": "Enterprise SRE Team",
         "rules": [
             {
-                "type": "Profile-SAML",
+                "type": "<type>",
                 "realm_name": "<enter your realm name>",
                 "expiration": 3600,
                 "conditions": [
