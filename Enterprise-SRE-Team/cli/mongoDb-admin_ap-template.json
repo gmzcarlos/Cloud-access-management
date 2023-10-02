@@ -1,0 +1,26 @@
+{
+  "name": "MongoDB_Administrator",
+  "description": "Grant Administrator role to MongoDB service",
+  "account_id": "<enterprise account id>",
+  "policy": {
+    "type": "access",
+    "description": "Grant Administrator role to MongoDB service",
+    "resource": {
+      "attributes": [
+        {
+          "key": "serviceName",
+          "operator": "stringEquals",
+          "value": "databases-for-mongodb"
+        }
+      ]
+    },
+    "control": {
+      "grant": {
+        "roles": [{
+          "role_id": "crn:v1:bluemix:public:iam::::role:Administrator"
+        }]
+      }
+    }
+  }
+}
+

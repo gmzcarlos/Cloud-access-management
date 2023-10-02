@@ -1,0 +1,36 @@
+{
+    "name": "SRE_Team",
+    "description": "SRE team access",
+    "account_id": "e3aa0adff348470f803d4b6e53d625cf",
+    "profile": {
+        "name": "Enterprise SRE Team",
+        "rules": [
+            {
+                "type": "Profile-SAML",
+                "realm_name": "https://w3id.sso.ibm.com/auth/sps/samlidp2/saml20",
+                "expiration": 3600,
+                "conditions": [
+                    {
+                        "claim": "cn",
+                        "operator": "EQUALS",
+                        "value": "\"CARLOS F GOMEZ\""
+                    }
+                ]
+            }
+        ]
+    },
+    "policy_template_references": [
+        {
+            "id": "policyTemplate-e76bb24c-3e28-4259-a644-7dfaea3f97f8",
+            "version": "1"
+        },
+        {
+            "id": "policyTemplate-59ef9218-f3d0-4f1f-a97d-6303493c7fea",
+            "version": "1"
+        },
+        {
+            "id": "policyTemplate-243c4d6a-b679-4111-ad23-de604a1c8ae8",
+            "version": "1"
+        }
+    ]
+}

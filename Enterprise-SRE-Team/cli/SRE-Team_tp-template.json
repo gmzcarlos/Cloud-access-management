@@ -1,0 +1,32 @@
+{
+    "name": "SRE_Team",
+    "description": "SRE team access",
+    "account_id": "<enterprise account id>",
+    "profile": {
+        "name": "Enterprise SRE Team",
+        "rules": [
+            {
+                "type": "Profile-SAML",
+                "realm_name": "<enter your realm name>",
+                "expiration": 3600,
+                "conditions": [
+                    {
+                        "claim": "team",
+                        "operator": "EQUALS",
+                        "value": "\"SRE Team\""
+                    }
+                ]
+            }
+        ]
+    },
+    "policy_template_references": [
+        {
+            "id": "<access policy template id>",
+            "version": "1"
+        },
+        {
+            "id": "access policy template id>",
+            "version": "1"
+        }
+    ]
+}

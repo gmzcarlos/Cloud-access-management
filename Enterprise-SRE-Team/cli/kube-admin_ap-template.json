@@ -1,0 +1,28 @@
+{
+  "name": "Kube_Administrator",
+  "description": "Grant Administrator and Manager roles to Kube service",
+  "account_id": "<enterprise account id>",
+  "policy": {
+    "type": "access",
+    "description": "Grant Administrator and Manager role to Kube service",
+    "resource": {
+      "attributes": [
+        {
+          "key": "serviceName",
+          "operator": "stringEquals",
+          "value": "containers-kubernetes"
+        }
+      ]
+    },
+    "control": {
+      "grant": {
+        "roles": [{
+          "role_id": "crn:v1:bluemix:public:iam::::role:Administrator"
+        }, {
+          "role_id": "crn:v1:bluemix:public:iam::::serviceRole:Manager"
+        }]
+      }
+    }
+  }
+}
+

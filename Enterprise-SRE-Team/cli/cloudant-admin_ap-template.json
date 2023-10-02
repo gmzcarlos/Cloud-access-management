@@ -1,0 +1,26 @@
+{
+  "name": "Cloudant_Administrator",
+  "description": "Grant Administrator role to Cloudant service",
+  "account_id": "<enterprise account id>",
+  "policy": {
+    "type": "access",
+    "description": "Grant Administrator role to Cloudant service",
+    "resource": {
+      "attributes": [
+        {
+          "key": "serviceName",
+          "operator": "stringEquals",
+          "value": "cloudantnosqldb"
+        }
+      ]
+    },
+    "control": {
+      "grant": {
+        "roles": [{
+          "role_id": "crn:v1:bluemix:public:iam::::role:Administrator"
+        }]
+      }
+    }
+  }
+}
+
