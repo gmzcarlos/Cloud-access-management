@@ -1,19 +1,19 @@
 {
     "name": "SRE_Team",
     "description": "SRE team access",
-    "account_id": "e3aa0adff348470f803d4b6e53d625cf",
+    "account_id": "<account id>",
     "profile": {
         "name": "Enterprise SRE Team",
         "rules": [
             {
-                "type": "Profile-SAML",
-                "realm_name": "https://w3id.sso.ibm.com/auth/sps/samlidp2/saml20",
+                "type": "<type>",
+                "realm_name": "<add your real name>",
                 "expiration": 3600,
                 "conditions": [
                     {
-                        "claim": "cn",
+                        "claim": "team",
                         "operator": "EQUALS",
-                        "value": "\"CARLOS F GOMEZ\""
+                        "value": "\"SRE Team\""
                     }
                 ]
             }
