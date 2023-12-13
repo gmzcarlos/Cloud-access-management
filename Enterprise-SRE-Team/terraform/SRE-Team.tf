@@ -15,7 +15,7 @@ provider "ibm" {
 resource "ibm_iam_policy_template" "Kube_Administrator_ap_template" {
 	name = "Kube_Administrator"
 	description = "Grant Administrator and Manager roles to Kube service"
-	committed = "true"
+	committed = true
 	policy {
 		type = "access"
 		resource {
@@ -33,7 +33,7 @@ resource "ibm_iam_policy_template" "Kube_Administrator_ap_template" {
 resource "ibm_iam_policy_template" "MongoDb_Administrator_ap_template" {
 	name = "MongoDb_Administrator"
 	description = "Grant Administrator role to MongoDb service"
-	committed = "true"
+	committed = true
 	policy {
 		type = "access"
 		resource {
