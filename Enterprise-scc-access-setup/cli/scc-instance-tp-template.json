@@ -1,0 +1,28 @@
+{
+    "name": "SCC_Enterprise_Instance",
+    "description": "Enterprise SCC access",
+    "account_id": "<enterprise account id>",
+    "profile": {
+        "name": "Enterprise SCC access",
+        "identities": [
+            {
+                "type": "crn",
+                "identifier": "<scc instance CRN>"
+            }
+        ]
+    },
+    "policy_template_references": [
+        {
+            "id": "<access policy template id>",
+            "version": "1"
+        },
+        {
+            "id": "access policy template id>",
+            "version": "1"
+        },
+        {
+            "id": "access policy template id>",
+            "version": "1"
+        }
+    ]
+}

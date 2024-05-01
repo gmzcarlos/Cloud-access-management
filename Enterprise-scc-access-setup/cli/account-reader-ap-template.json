@@ -1,0 +1,30 @@
+{
+  "name": "Account_Management_Services_Reader",
+  "description": "Grant Viewer, ConfigReader roles to all account management services in the account",
+  "account_id": "<enterprise account id>",
+  "committed": true,
+  "policy": {
+    "type": "access",
+    "description": "Grant Viewer, ConfigReader roles to all account management services in the account",
+    "resource": {
+      "attributes": [
+        {
+          "key": "serviceType",
+          "operator": "stringEquals",
+          "value": "platform_service"
+        }
+      ]
+    },
+    "control": {
+      "grant": {
+        "roles": [
+          {
+            "role_id": "crn:v1:bluemix:public:iam::::role:Viewer"
+          },{
+            "role_id": "crn:v1:bluemix:public:iam::::role:ConfigReader"
+          }
+        ]
+      }
+    }
+  }
+}
