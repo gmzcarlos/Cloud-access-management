@@ -2,7 +2,7 @@ terraform {
   required_providers {
     ibm = {
       source = "IBM-Cloud/ibm"
-      version = ">= 1.64.2"
+      version = ">= 1.77.1"
     }
   }
 }
@@ -102,15 +102,15 @@ resource "ibm_iam_trusted_profile_template" "SCC_Instance_tp_template" {
     }
   }
   policy_template_references {
-	id = split("/", ibm_iam_policy_template.Kube_Administrator_ap_template.id)[0]
+	id = ibm_iam_policy_template.Kube_Administrator_ap_template.template_id
 	version = ibm_iam_policy_template.Kube_Administrator_ap_template.version
   }
   policy_template_references {
-	id = split("/", ibm_iam_policy_template.Services_Reader_ap_template.id)[0]
+	id = ibm_iam_policy_template.Services_Reader_ap_template.template_id
 	version = ibm_iam_policy_template.Services_Reader_ap_template.version
   }
   policy_template_references {
-	id = split("/", ibm_iam_policy_template.Account_Management_Services_Reader_ap_template.id)[0]
+	id = ibm_iam_policy_template.Account_Management_Services_Reader_ap_template.template_id
 	version = ibm_iam_policy_template.Account_Management_Services_Reader_ap_template.version
   }
   committed = true
